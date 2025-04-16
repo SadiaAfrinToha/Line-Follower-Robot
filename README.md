@@ -38,21 +38,21 @@
 - **Upgradeable**  
   Can be expanded with Bluetooth control, obstacle avoidance, PID control, or more sensors later.
 
-  ## Circuit Connections – Bluetooth Controlled Car with Arduino
+## Circuit Connections – Line Follower Robot
 
 ## L298N Motor Driver to Arduino
 
 | L298N Pin | Arduino Pin | Description |
-|----------|-------------|-------------|
-| ENA      | 10          | Left motor speed (PWM) |
-| IN1      | 9           | Left motor direction control |
-| IN2      | 8           | Left motor direction control |
-| IN3      | 7           | Right motor direction control |
-| IN4      | 6           | Right motor direction control |
-| ENB      | 5           | Right motor speed (PWM) |
-| VCC      | 12V Battery | Motor power |
-| GND      | GND         | Common ground |
-| 5V       | 5V (Arduino) *(Optional)* |
+|-----------|-------------|-------------|
+| ENA       | 10          | Enable/speed control for Left Motor (PWM) |
+| IN1       | 9           | Direction control for Left Motor |
+| IN2       | 8           | Direction control for Left Motor |
+| IN3       | 7           | Direction control for Right Motor |
+| IN4       | 6           | Direction control for Right Motor |
+| ENB       | 5           | Enable/speed control for Right Motor (PWM) |
+| VCC       | 12V Battery | Motor power supply |
+| GND       | GND         | Common ground |
+| 5V (if jumper is present) | 5V Arduino | Power logic circuit (optional) |
 
 ---
 
@@ -65,40 +65,12 @@
 
 ---
 
-## Bluetooth Module (HC-05/HC-06) to Arduino
+## IR Sensors to Arduino
 
-| Bluetooth Pin | Arduino Pin | Note |
-|---------------|-------------|------|
-| VCC           | 5V          | Power supply |
-| GND           | GND         | Ground |
-| TX            | RX (Pin 0)  | Receives data from Bluetooth |
-| RX            | TX (Pin 1)  | Sends data to Bluetooth *(Use voltage divider!)* |
+| IR Sensor     | Arduino Pin | Description              |
+|---------------|-------------|--------------------------|
+| Left Sensor   | A0
 
----
-
-## Headlight (LED) to Arduino
-
-| LED Pin | Arduino Pin | Description |
-|---------|-------------|-------------|
-| +ve     | 1           | Turn ON/OFF via digitalWrite |
-| -ve     | GND         | Ground |
-
----
-
-## IR Sensors to Arduino (Optional for Line Following)
-
-| IR Sensor | Arduino Pin |
-|-----------|-------------|
-| Left IR   | A0          |
-| Right IR  | A1          |
-| Middle IR | A4          |
-
----
-
-## Power Supply Notes
-
-- Use **9V or 12V battery** to power motors via **L298N VCC**.
-- Never power motors directly from
 
 
 
